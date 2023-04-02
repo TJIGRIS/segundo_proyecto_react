@@ -10,12 +10,13 @@ export default {
       },
       textColor: {
         colorPrimario: "#fff",
-        colorSecundario: "#ad6170",
+        colorSecundario: "#ff6d21",
         colorTerciario: "#707186",
       },
-      shadowColor: {
-        colorPrimarioBox: "#ad6170",
-      },
+      borderColor: {
+        colorPrimario: "#8d4760"
+      }
+      
     },
   },
   plugins: [],

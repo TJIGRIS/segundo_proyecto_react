@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App bg-colorPrimario overflow-hidden text-white">
       <Header />
-      {/* <Hero /> */}
+      <Hero />
       {/* <Footer /> */}
     </div>
   );
