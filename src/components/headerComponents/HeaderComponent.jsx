@@ -3,7 +3,7 @@ import women from "../../assets/women.svg";
 
 export const HeaderComponent = () => {
   return (
-    <div className="container mx-auto grid grid-cols-2 place-content-center h-screen">
+    <div className="container mx-auto grid grid-cols-2 place-content-center h-screen lg:p-0 p-4">
       {/* left */}
       <div className="flex flex-col gap-7">
         <div className="flex flex-col gap-3">
@@ -23,7 +23,7 @@ export const HeaderComponent = () => {
       </div>
 
       {/* right */}
-      <div className="">
+      <div className="grid place-items-center">
         <img className="w-[30rem]" src={women} alt="" />
       </div>
     </div>

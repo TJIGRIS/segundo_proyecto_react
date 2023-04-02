@@ -3,7 +3,7 @@ import React from "react";
 export const NavComponent = () => {
   return (
     <nav className="bg-colorSecundario">
-      <div className="container mx-auto flex justify-between items-center h-14">
+      <div className="container mx-auto flex justify-between items-center h-14 lg:p-0 p-4">
         <div className="font-semibold text-2xl ">
           <a href="#">
             TJ

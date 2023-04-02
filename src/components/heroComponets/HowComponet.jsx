@@ -33,23 +33,23 @@ export const HowComponet = () => {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-6">
+      <div className="mt-10 flex justify-between">
         {How.map((item) => (
           <article
             key={item.id}
-            className="bg-colorSecundario w-max flex flex-col gap-y-5 p-5 rounded-lg"
+            className="bg-colorSecundario w-40 h-44 flex flex-col justify-between p-5 rounded-lg shadow-lg"
           >
             <div className="text-colorSecundario text-xl">
               <AiOutlineArrowUp />
             </div>
 
             <div className=" font-semibold">
-              <p className="text-3xl">
-                <span className="text-base">{item.dolar} </span>
+              <p className="text-4xl">
+                <span className="text-base font-light">{item.dolar} </span>
                 {item.number}
               </p>
 
-              <p className="text-sm mt-2 text-gray-400">{item.text}</p>
+              <p className="text-sm mt-4 text-gray-400">{item.text}</p>
             </div>
           </article>
         ))}

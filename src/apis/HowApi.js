@@ -37,7 +37,7 @@ const how = [
     icon: "",
     dolar: "$",
     number: "51m",
-    text: "",
+    text: "LAST W/O",
   },
 ];
 
