@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import { choose } from "../../apis/HowApi";
 
+import { motion } from "framer-motion";
+import { Deslizar } from "../../animacion/Deslizar";
+
 export const ChooseComponent = () => {
   const [Choose, setChoose] = useState(choose);
 
   return (
     <div className="grid grid-cols-2">
       {/* Left */}
-      <div className="grid grid-cols-2 place-content-between w-[32rem] gap-6">
+      <motion.div
+        variants={Deslizar("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.1 }}
+        className="grid grid-cols-2 place-content-between w-[32rem] gap-6"
+      >
         {Choose.map((item) => (
           <article className="bg-colorSecundario  h-44 p-4 flex flex-col justify-between rounded-lg shadow">
             <div className={`${item.color} w-10 h-2  rounded-full `}></div>
@@ -28,10 +37,16 @@ export const ChooseComponent = () => {
             </div>
           </article>
         ))}
-      </div>
+      </motion.div>
 
       {/* Right */}
-      <div className="grid place-items-center">
+      <motion.div
+        variants={Deslizar("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.1 }}
+        className="grid place-items-center"
+      >
         <div className="flex flex-col gap-10">
           <div className="">
             <p className="text-colorSecundario text-md mb-2">NUMBERS</p>
@@ -51,7 +66,7 @@ export const ChooseComponent = () => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterComponent } from '../components/footerComponents/NavComponent'
+import { FooterComponent } from '../components/footerComponents/FooterComponent'
 
 export const Footer = () => {
   return (

@@ -1,19 +1,33 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player";
+import { Deslizar } from "../../animacion/Deslizar";
+import { motion } from "framer-motion";
 
 export const ZetComponent = () => {
   return (
     <div className="grid grid-cols-2 gap-6 mb-32">
       {/* Left */}
-      <div className="rounded-lg overflow-hidden w-max">
+      <motion.div
+        variants={Deslizar("right", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="rounded-lg overflow-hidden w-max"
+      >
         <ReactPlayer
           url="https://music.youtube.com/watch?v=aUVzcnXOVY4&list=RDAMVMaUVzcnXOVY4"
           controls
         />
-      </div>
+      </motion.div>
 
       {/* Right */}
-      <div className="grid place-items-center">
+      <motion.div
+        variants={Deslizar("left", 0.1)}
+        initial="hidden"
+        whileInView={"show"}
+        viewport={{ once: false, amount: 0.7 }}
+        className="grid place-items-center"
+      >
         <div className="flex flex-col gap-10">
           <div className="">
             <p className="text-colorSecundario text-md mb-2">ABOUT</p>
@@ -37,7 +51,7 @@ export const ZetComponent = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

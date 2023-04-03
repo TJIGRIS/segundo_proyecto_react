@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { Deslizar } from "../../animacion/Deslizar";
 
 export const FooterComponent = () => {
   return (
-    <nav className="">
+    <motion.nav
+      variants={Deslizar("up", 0.1)}
+      initial="hidden"
+      whileInView={"show"}
+      viewport={{ once: false, amount: 0.1 }}
+      className=""
+    >
       <div className="container mx-auto flex justify-between items-center h-14 lg:p-0 p-4">
         <div className="font-semibold text-2xl ">
           <a href="#">
@@ -57,6 +65,6 @@ export const FooterComponent = () => {
           made by <span className="text-white">rooninum</span>
         </p>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
