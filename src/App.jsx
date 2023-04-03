@@ -10,7 +10,7 @@ function App() {
     <div className="App bg-colorPrimario overflow-hidden text-white">
       <Header />
       <Hero />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

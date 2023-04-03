@@ -11,7 +11,6 @@ export default {
       textColor: {
         colorPrimario: "#fff",
         colorSecundario: "#ff6d21",
-        colorTerciario: "#707186",
       },
       borderColor: {
         colorPrimario: "#8d4760"

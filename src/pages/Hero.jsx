@@ -1,6 +1,8 @@
 import React from "react";
 import { HowComponet } from "../components/heroComponets/HowComponet";
 import { ChooseComponent } from "../components/heroComponets/ChooseComponent";
+import { Calcularor } from "../components/heroComponets/Calcularor";
+import { ZetComponent } from "../components/heroComponets/ZetComponent";
 
 export const Hero = () => {
   return (
@@ -12,6 +14,11 @@ export const Hero = () => {
       </div>
 
       <ChooseComponent />
+
+      <Calcularor />
+
+      <ZetComponent />
+
     </div>
   );
 };
