@@ -36,9 +36,14 @@ export const FooterComponent = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <label className="rounded-full" htmlFor="">
-            En
-          </label>
+          <select
+            className="bg-transparent outline-none border-none"
+            name="lenguajes"
+            id="lang"
+          >
+            <option value="EN">{"EN"}</option>
+            <option value="ES">{"ES"}</option>
+          </select>
         </div>
       </div>
 
@@ -48,7 +53,9 @@ export const FooterComponent = () => {
         <p>Privacy Policy</p>
         <p>Sales & Rufunds</p>
         <p>Legal</p>
-        <p>made by <span className="text-white">rooninum</span></p>
+        <p>
+          made by <span className="text-white">rooninum</span>
+        </p>
       </div>
     </nav>
   );

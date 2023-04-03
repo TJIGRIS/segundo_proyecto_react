@@ -1,4 +1,6 @@
 import React from "react";
+import { FcAddressBook } from "react-icons/fc";
+import { FcAcceptDatabase } from "react-icons/fc";
 
 export const NavComponent = () => {
   return (
@@ -38,9 +40,25 @@ export const NavComponent = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <label className="rounded-full" htmlFor="">
-            En
-          </label>
+          <select
+            className="bg-transparent outline-none border-none"
+            name="lenguajes"
+            id="lang"
+          >
+            <option value="EN">
+              <div className="">
+                <FcAddressBook />
+              </div>
+              {"EN"}
+            </option>
+            <option value="ES">
+              <div className="">
+                <FcAcceptDatabase />
+              </div>
+              {"ES"}
+            </option>
+          </select>
+
           <button className="bg-gradient-to-r from-[#f05908] to-[#c54fc4] px-6 py-2 rounded-full">
             Get Started
           </button>

@@ -1,5 +1,7 @@
 import React from "react";
 import women from "../../assets/women.svg";
+import { motion } from "framer-motion";
+import { deslizarDesdeLaIzquierda } from "../../animacion/Deslizar";
 
 export const HeaderComponent = () => {
   return (
@@ -23,9 +25,11 @@ export const HeaderComponent = () => {
       </div>
 
       {/* right */}
-      <div className="grid place-items-center">
+      <motion.div
+        variants={deslizarDesdeLaIzquierda}
+      >
         <img className="w-[30rem]" src={women} alt="" />
-      </div>
+      </motion.div>
     </div>
   );
 };
